@@ -27,7 +27,6 @@ import com.batch.simplebatch.repo.CsvRepo;
 import lombok.AllArgsConstructor;
 
 @Configuration
-@EnableBatchProcessing
 @AllArgsConstructor
 public class CsvConfig {
 	
