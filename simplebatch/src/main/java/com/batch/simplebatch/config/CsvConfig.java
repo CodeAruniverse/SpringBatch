@@ -74,6 +74,7 @@ public class CsvConfig {
     @Bean
     public Step step1() {
         return new StepBuilder("csvImport", jobRepository)
+        		//chunk comes with a TransactionManager part
                 .<Product, Product>chunk(5,platformTransactionManager)
                 .reader(reader())
                 .processor(new CsvFileProcessor())
